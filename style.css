@@ -1,0 +1,930 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --color-main-bg: black;
+    --color-white: white;
+    --color-btn: rgb(15, 142, 96);
+    --transition: all 400ms ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: var(--color-main-bg);
+    margin: 0 auto;
+    background-image: url(./image/body\ 2.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 2.4rem;
+    letter-spacing: 3px;
+
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+a {
+    color: black;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.button {
+    background-color: var(--color-btn);
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border: transparent;
+    border-radius: 0.7rem;
+    position: relative;
+    transition: var(--transition);
+}
+
+.button:hover {
+    background-color: rgba(231, 226, 226, 0.2);
+    color: black;
+
+}
+
+/* .........nav................. */
+
+.window-scroll {
+    background-color: rgba(217, 212, 212, 0.5);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    background: transparent;
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    padding-right: 1rem;
+}
+
+.nav_container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+.nav_logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.nav_logo img {
+    object-fit: contain;
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav_menu a {
+    font-size: 1rem;
+    position: relative;
+}
+
+.nav_menu a:hover {
+    color: var(--color-bg2);
+    animation: animatenav 600ms linear;
+}
+
+.nav_logo a {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav button {
+    display: none;
+}
+
+nav img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+@keyframes animatenav {
+
+    0% {
+        bottom: 0px;
+        top: 0px;
+    }
+
+    50% {
+        top: 20px;
+        bottom: 0px;
+    }
+
+    100% {
+        bottom: 0px;
+        top: 0px;
+    }
+
+}
+
+/* ..........header........... */
+
+header {
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    height: 100vh;
+    margin-bottom: 5rem;
+    box-shadow: 0.4rem 2rem 3rem white;
+}
+
+.header_container span {
+    color: var(--color-btn);
+}
+
+
+.header_container {
+    background-image: url(./image/header\ mm.PNG);
+    height: 100%;
+    align-items: center;
+}
+
+.header_info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    text-align: center;
+}
+
+.header_info h4 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.header_info a {
+    margin-bottom: 1rem;
+}
+
+.header_socials a {
+    padding: 1rem;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+
+.header_container .icon_down {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ..........About........... */
+
+.about {
+    margin-top: 4rem;
+    box-shadow: 0.4rem 2rem 3rem white;
+}
+
+.about_header {
+    margin-bottom: 1rem;
+}
+
+.about h1 {
+    text-align: center;
+    margin: 1rem;
+    padding: 2rem;
+    border-bottom: 1px solid var(--color-btn);
+}
+
+.about p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.about_container {
+    display: flex;
+    flex-direction: 50% 50%;
+    gap: 4rem;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 75vw;
+}
+
+.about_left h1 {
+    margin: 1rem;
+}
+
+
+.about_left p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.about_left span {
+    font-weight: bold;
+}
+
+.about_boxs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box {
+    padding: 0.7rem;
+    margin: 0.5rem;
+    background-color: var(--color-btn);
+    border-radius: 0.5rem;
+    box-shadow: 0.3rem 0.5rem 2rem white;
+    height: max-content;
+}
+
+.about_right h1 {
+    margin: 1rem;
+}
+
+
+/* ..........Resume........... */
+
+.resume {
+    padding: 3rem;
+    color: white;
+    box-shadow: 0.4rem 2rem 3rem white;
+
+}
+
+.resume h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: black;
+    border-bottom: 1px solid var(--color-btn);
+    padding-bottom: 3rem;
+}
+
+.resume .par {
+    text-align: center;
+    font-size: 1.2rem;
+    color: black;
+    padding-bottom: 3rem;
+}
+
+.resume_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 0 auto;
+    width: 70vw;
+}
+
+.resume_box {
+    background-color: rgb(23, 22, 22);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.6rem 2rem rgb(80, 78, 78);
+}
+
+.resume_box h2 {
+    color: var(--color-btn);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.resume_box h4 {
+    margin-bottom: 0.5rem;
+}
+
+.resume_box p {
+    margin-bottom: 0.8rem;
+}
+
+/* ..........Service........... */
+
+.service {
+    padding: 3rem;
+    box-shadow: 0.4rem 2rem 3rem white;
+}
+
+.service h1 {
+    border-bottom: 1px solid var(--color-btn);
+    text-shadow: -2px 4px 3px rgb(167, 164, 164);
+}
+
+.service h1,
+h2 {
+    text-align: center;
+    padding: 2rem;
+}
+
+.service h2 {
+    margin-bottom: 1rem;
+    color: var(--color-btn);
+}
+
+.service_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 0 auto;
+    width: 70vw;
+}
+
+.service_box {
+    background-color: rgb(23, 22, 22);
+    padding: 2rem;
+    box-shadow: 0.3rem 0.4rem 2rem rgb(80, 78, 78);
+    border-radius: 0.5rem;
+    color: white;
+    transition: var(--transition);
+}
+
+.service_icon {
+    font-size: 2rem;
+    position: relative;
+    left: 43%;
+    transform: translateY(-50%);
+    margin-top: 1rem;
+
+}
+
+.service_info {
+    text-align: center;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.service_info::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 3rem;
+    border-bottom: 3px solid var(--color-btn);
+}
+
+.service_box:hover {
+    background-color: transparent;
+    color: black;
+    transition: var(--transition);
+}
+
+
+/* ..........Projects........... */
+.projects {
+    background-color: black;
+    padding: 3rem 0;
+
+}
+
+.projects h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.project_container {
+    max-width: 70vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+}
+
+.project_box {
+    position: relative;
+}
+
+.box2 {
+    grid-column: 2/4;
+}
+
+.box3 {
+    grid-column: 1/3;
+}
+
+.box6 {
+    grid-column: 2/4;
+}
+
+.box7 {
+    grid-column: 1/3;
+}
+
+.project_box h4 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+    color: white;
+}
+
+
+.project_box:hover img {
+    filter: saturate(0);
+    opacity: 0.3;
+    z-index: 1;
+    transition: var(--transition);
+    cursor: cell;
+}
+
+.project_box:hover h4 {
+    display: block;
+    transition: var(--transition);
+    cursor: cell;
+}
+
+/* ..........contact........... */
+
+.contact_container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    color: black;
+    background-image: url(/image/header\ main.PNG.PNG);
+
+}
+
+.contact_container h1 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact_container h2 {
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 500px;
+    padding-bottom: 1rem;
+}
+
+form input,
+textarea {
+    padding: 1rem 1rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid white;
+    box-shadow: 0.1rem 0.2rem 3rem rgb(170, 168, 168);
+    font-size: 1rem;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.inputfield:focus {
+    background-color: white;
+}
+
+/* ..........footer........... */
+
+footer {
+    background-image: url(image/header\ mm.PNG);
+}
+
+.footer_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem;
+    width: 90vw;
+    margin: 0 auto;
+    color: black;
+}
+
+.footer_left a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.footer_left p {
+    margin-top: 2rem;
+}
+
+.footer_right a {
+    font-size: 1.5rem;
+    margin: 0 0.7rem;
+    color: black;
+}
+
+.footer_right h3 {
+    padding-left: 1rem;
+}
+
+.footer_right {
+    position: relative;
+}
+
+.footer_right h3 {
+    position: absolute;
+    left: 50%;
+}
+
+.footer_right .socials {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+
+.footer_copy {
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+}
+
+/* ......... MEDIA QUERIES FOR TABLET........... */
+
+@media screen and (max-width:1024px) {
+
+    .h1 {
+        font-size: 2.2rem;
+    }
+
+    .h2 {
+        font-size: 1.7rem;
+    }
+
+    .h3 {
+        font-size: 1.4rem;
+    }
+
+    .h4 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        line-height: 1.3rem;
+    }
+
+    nav button {
+        display: inline-block;
+        font-size: 2rem;
+        color: var(--color-btn);
+        margin-right: 2.3rem;
+        background-color: transparent;
+
+    }
+
+    nav #close-btn {
+        display: none;
+    }
+
+    .nav_menu {
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        width: 12rem;
+        height: fit-content;
+        text-align: center;
+        display: block;
+        z-index: 1;
+        background-image: url(/image/body\ 2.PNG);
+        background-size: cover;
+        box-shadow: -1rem 0 2rem rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .nav_menu li {
+        width: 100%;
+    }
+
+    .nav_menu a {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .nav_menu a:hover {
+        animation: animatenav 400ms linear;
+    }
+
+    @keyframes animatenav {
+
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+
+        50% {
+            left: 20px;
+            top: 0px;
+        }
+
+        100% {
+            left: 0px;
+            top: 0px;
+        }
+
+    }
+
+    header {
+        height: 80vh;
+    }
+
+    .about_container {
+        gap: 3rem;
+        padding: 1rem;
+        margin: 0 auto;
+        width: 85vw;
+    }
+
+    .about_container h1 {
+        font-size: 1.8rem;
+        padding: 2rem;
+    }
+
+    .about {
+        padding-bottom: 2rem;
+    }
+
+    .resume_container {
+        width: 85vw;
+    }
+
+    .resume_box h2 {
+        padding: 1rem 0;
+    }
+
+    .resume {
+        padding-bottom: 3rem;
+    }
+
+    .service_container {
+        width: 85vw;
+    }
+
+    .service h1 {
+        padding-top: 1rem;
+    }
+
+    .service_box {
+        padding: 1.5rem;
+    }
+
+    .service_icon {
+        left: 40%;
+    }
+
+    .service_info::after {
+        left: 37%;
+    }
+
+    .project_container {
+        max-width: 85vw;
+    }
+
+    .contact_container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact_left {
+        display: none;
+    }
+
+    form {
+        gap: 1.3rem;
+    }
+
+    form {
+        padding-bottom: 3rem;
+    }
+
+    .footer_container {
+        width: 90vw;
+        gap: 2rem;
+        padding: 3rem 1rem;
+    }
+
+
+
+}
+
+/* ......... MEDIA QUERIES FOR Phone........... */
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    .nav_menu {
+        margin-right: 3%;
+    }
+
+    header {
+        margin: 1rem 0;
+        height: 60vh;
+    }
+
+    .header_container h1 {
+        font-size: 1.9rem;
+    }
+
+    .header_container .header_info h4 {
+        margin-top: 1rem;
+    }
+
+    .header_info a {
+        padding: 0.7rem 1rem;
+    }
+
+    .header_container {
+        padding: 2rem;
+    }
+
+    .about h1 {
+        margin-bottom: 1.4rem;
+        padding-bottom: 1.2rem;
+    }
+
+    .about {
+        padding: 1rem 2rem;
+    }
+
+    .about_container {
+        max-width: 95vw;
+        flex-direction: column;
+    }
+
+    .about p {
+        font-size: 1.1rem;
+    }
+
+    .about_left h1 {
+        padding-top: 1rem;
+    }
+
+    .about_left {
+        position: relative;
+    }
+
+    .about_left .button {
+        position: absolute;
+        left: 40%;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .box {
+        padding: 0.5rem;
+        margin: 0.4rem;
+    }
+
+    .box h4 {
+        font-size: 1.2rem;
+    }
+
+    .resume h1 {
+        padding-bottom: 1.2rem;
+    }
+
+    .resume_container {
+        width: 90vw;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        gap: 1.5rem;
+    }
+
+    .resume .par {
+        font-size: 1.2rem;
+    }
+
+    .resume_box {
+        width: 80%;
+        margin: 0 1rem;
+        padding: 1rem;
+    }
+
+    .resume_box h2 {
+        padding: 0.5rem;
+    }
+
+    .service_container {
+        grid-template-columns: 1fr 1fr;
+        width: 80vw;
+        gap: 1rem;
+    }
+
+    .service h1 {
+        margin-top: 0.2rem;
+    }
+
+    .service h2 {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .service_info h4 {
+        font-size: 1rem;
+    }
+
+    .service {
+        padding-top: 1rem;
+    }
+
+    .service_box {
+        padding: 1.2rem;
+    }
+
+    .service_info::after {
+        left: 37%
+    }
+
+    .service_icon {
+        left: 43%;
+    }
+
+    .project_box:hover h4 {
+        font-size: 1rem;
+
+    }
+
+    .contact_container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact_left {
+        display: none;
+    }
+
+    .contact_right h2 {
+        font-size: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    form {
+        width: 350px;
+    }
+
+    form .button {
+        padding: 0.4rem;
+    }
+
+    .footer_container {
+        gap: 0.3rem;
+    }
+
+    .footer_right h3 {
+        position: absolute;
+        left: 20%;
+    }
+
+    .footer_right .socials {
+        position: absolute;
+        left: 20%;
+        top: 30%;
+    }
+
+    .footer_copy {
+        font-size: 0.9rem;
+    }
+
+}
